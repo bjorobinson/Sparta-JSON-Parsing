@@ -32,4 +32,11 @@ describe MockarooParser do
     end
   end
 
+  it "must, in each of these rows, contain a nested hash address, which contains a country and city, both of which are strings" do
+    for index in 0...@file.return().length
+      expect(@file.get_address(index)['city']).to be_instance_of(String)
+      expect(@file.get_address(index)['country']).to be_instance_of(String)
+    end
+  end
+
 end
