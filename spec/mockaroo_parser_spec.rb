@@ -3,10 +3,17 @@ require 'spec_helper'
 describe MockarooParser do
 
   before(:each) do
-    @file = ExchangeRates.new('json_example.json')
+    @file = MockarooParser.new('json_mockaroo_data.json')
   end
 
-  it "" do
+  it "must contain 50 rows of data" do
+    expect(@file.return().length).to eq 50
+  end
+
+  it "must, in each of these rows, contain a Hash of 4 items" do
+    for index in 0...@file.return().length
+      expect(@file.return_hash(index).length).to eq 4
+    end
   end
 
 end

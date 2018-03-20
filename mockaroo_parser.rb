@@ -7,5 +7,15 @@ class MockarooParser
     @json_person_file = JSON.parse(File.read(json_person_file))
   end
 
+  def return
+    @json_person_file
+  end
+
+  def return_hash index
+    @json_person_file[index]
+  end
 
 end
+
+# test = MockarooParser.new('json_mockaroo_data.json')
+# puts test.return
