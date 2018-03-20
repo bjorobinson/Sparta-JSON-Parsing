@@ -23,4 +23,13 @@ describe MockarooParser do
     end
   end
 
+  it "must, in each of these rows, contain an array of 3 emails, all of which are valid emails" do
+    for index in 0...@file.return().length
+      for index_email in 0..2
+        expect(@file.get_emails(index)[index_email]).to be_instance_of(String)
+        expect(@file.get_emails(index)[index_email]).to include('@')
+      end
+    end
+  end
+
 end
