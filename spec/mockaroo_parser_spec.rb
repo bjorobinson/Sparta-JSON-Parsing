@@ -16,4 +16,11 @@ describe MockarooParser do
     end
   end
 
+  it "must, in each of these rows, contain a first and second name, both of which are strings" do
+    for index in 0...@file.return().length
+      expect(@file.get_first_name(index)).to be_instance_of(String)
+      expect(@file.get_last_name(index)).to be_instance_of(String)
+    end
+  end
+
 end

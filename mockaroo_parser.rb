@@ -15,6 +15,14 @@ class MockarooParser
     @json_person_file[index]
   end
 
+  def get_first_name index
+    @json_person_file[index]['first_name']
+  end
+
+  def get_last_name index
+    @json_person_file[index]['last_name']
+  end
+
 end
 
 # test = MockarooParser.new('json_mockaroo_data.json')
