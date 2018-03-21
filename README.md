@@ -8,3 +8,18 @@ The Data...
 3.  must, in each of these rows, contain a first and second name, both of which are strings
 4.  must, in each of these rows, contain an array of 3 emails, all of which are valid emails
 5.  must, in each of these rows, contain a nested hash address, which contains a country and city, both of which are strings
+
+## Installation
+Clone the repository using the command into a chosen directory:
+
+`git clone git@github.com:bjorobinson/Sparta-JSON-Parsing.git`
+
+Download all dependencies by running the commands:
+
+`gem install json`
+
+`gem install rspec`
+
+To run the tests, in the chosen directory, run the command:
+
+`rspec`
